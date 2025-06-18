@@ -61,19 +61,3 @@ def predict(data: PatientData):
     ]])
     prediction = model.predict(features)[0]
     return {"prediction": str(prediction)}
-
-!pip freeze > requirements.txt
-
-# Lista personalizada de paquetes para Render (solo lo esencial)
-render_requirements = """
-flask==2.3.3
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.4.2
-matplotlib==3.8.4
-# agrega aquí los paquetes que SÍ usas realmente en tu app
-"""
-
-# Guardar en archivo limpio
-with open("requirements_render.txt", "w") as f:
-    f.write(render_requirements.strip())
